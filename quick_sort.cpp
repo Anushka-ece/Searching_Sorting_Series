@@ -26,9 +26,15 @@ int partition(int arr[],int l,int r)
             swap(arr,i,j);
         }
     }
+    //At the end of this loop,i will be pointing to the last smallest element than the element at pivot and all the elements after element at index i and before pivot,will
+    //be greater than thhe pivot element
     //after ending of for loop
+    
+    //Due to the above mentioned reason swapping is done to bring pivot element right before the elements greater than them and right after the element smaller than 
+    //pivot element
     swap(arr,i+1,r);//element at r is pivot
-    return i+1;
+    return i+1;//hence this is the index of pivot element 
+    //in this way pivot element will be found of all the left and right subarrays and sorting will be done
 }
 
 void quicksort(int arr[],int l,int r)
