@@ -16,7 +16,7 @@ void swap(int arr[],int i,int j)
 //i is denoting last number which is less than pivot
 int partition(int arr[],int l,int r)
 {
-    int pivot=arr[r];
+    int pivot=arr[r];//last element is considered as pivot
     int i=l-1;
     for(int j=l;j<r;j++)
     {
@@ -37,7 +37,7 @@ void quicksort(int arr[],int l,int r)
     {
         int pi=partition(arr,l,r);//this step will give us our pivot element
         quicksort(arr,l,pi-1);//left subhalf
-        quicksort(arr,pi+1,r);
+        quicksort(arr,pi+1,r);//right subhalf
     }
     
 }
